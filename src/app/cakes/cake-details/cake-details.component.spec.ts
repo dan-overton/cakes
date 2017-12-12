@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { RouterTestingModule } from "@angular/router/testing";
+import { Router } from "@angular/router";
+
+import { StarRatingModule } from 'angular-star-rating';
 
 import { CakeDetailsComponent } from './cake-details.component';
+import { CakeService } from '../cake.service';
 
 describe('CakeDetailsComponent', () => {
   let component: CakeDetailsComponent;
@@ -8,7 +14,9 @@ describe('CakeDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CakeDetailsComponent ]
+      declarations: [ CakeDetailsComponent ],
+      imports: [StarRatingModule, RouterTestingModule, HttpClientTestingModule],
+      providers: [CakeService]
     })
     .compileComponents();
   }));
