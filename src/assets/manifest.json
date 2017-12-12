@@ -1,7 +1,7 @@
 {
     "short_name": "Cakes",
     "name": "Cakes Test App",
-    "start_url": "index.html?launcher=true",
+    "start_url": "http://cakes-test-site.azurewebsites.net/index.html",
     "background_color": "#679ad4",
     "display": "standalone"
 }
