@@ -1,4 +1,5 @@
 <form #form="ngForm" (submit)="submitForm(form)">
+  <p class="alert alert-danger" *ngIf="errorMessage">Could not create cake, {{errorMessage}}</p>
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Enter cake name" [(ngModel)]="model.name" required>
@@ -23,6 +24,7 @@
 </form>
 <div class="row">
   <div class="col">
-    <button class="btn btn-primary" [routerLink]="['']">Back to Cakes</button>
+    <hr/>
+    <button class="btn btn-secondary" [routerLink]="['']">Back to Cakes</button>
   </div>
 </div>

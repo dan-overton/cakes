@@ -12,6 +12,7 @@ export class CakeDetailsComponent implements OnInit {
 
   cake: Cake;
   loading = true;
+  errorMessage = "";
 
   constructor(
     private _route: ActivatedRoute,
@@ -20,12 +21,15 @@ export class CakeDetailsComponent implements OnInit {
 
   ngOnInit() {
     const id = this._route.snapshot.paramMap.get('id');
-    
+
     this._cakeService.getCake(id)
       .subscribe(cake => {
         this.cake = cake;
         this.loading = false;
-      });
+        },
+        error => {
+          this.errorMessage = error;
+          this.loading = false;
+        });
   }
-
 }
