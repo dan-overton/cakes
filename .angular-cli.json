@@ -11,12 +11,7 @@
         "assets",
         "favicon.ico",
         {
-          "glob": "index.js",
-          "input": "./server/",
-          "output": "./"
-        },
-        {
-          "glob": "package.json",
+          "glob": "**/*.*",
           "input": "./server/",
           "output": "./"
         }
