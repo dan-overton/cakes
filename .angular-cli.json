@@ -11,11 +11,11 @@
         "assets",
         "favicon.ico",
         {
-  "glob": "**/*.*",
-  "input": "./server/",
-  "output": "./",
-  "allowOutsideOutDir": false
-}
+          "glob": "**/*.*",
+          "input": "./server/",
+          "output": "./",
+          "allowOutsideOutDir": false
+        }
       ],
       "index": "index.html",
       "main": "main.ts",

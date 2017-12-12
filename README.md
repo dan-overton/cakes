@@ -1,27 +1,18 @@
 # Cakes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+This is a sample web application written in Angular 5, using TypeScript. The app is deployed to an Azure app service at 
+http://cakes-test-site.azurewebsites.net/. It's continually deployed on check in to master, via Visual Studio Team Services.
 
-## Development server
+## Tooling
+The skeleton of the app was generated using the Angular CLI, which takes care of most of the pain of getting a transpiling pipeline set up with webpack.
+The only changes I made were to enable SCSS support, and to take out some of the odder linting rules.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I used this instead of setting up my own pipeline as I find it quicker, less prone to error, and more likely to follow best practices
+(if I'd done this in React, I would have done the same via create-react-app.)
 
-## Code scaffolding
+## Unit Testing
+The skeleton app gets generated with unit tests, I've left these minimal (they just check the components can create successfully) but they could be expanded on if required.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Mobile
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The app comes with a manifest allowing it to be opened in standalone mode on Android devices, when added to the home screen.
