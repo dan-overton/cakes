@@ -1,0 +1,28 @@
+<form #form="ngForm" (submit)="submitForm(form)">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter cake name" [(ngModel)]="model.name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <input type="text" class="form-control" id="comment" name="comment" placeholder="What do you think?" [(ngModel)]="model.comment" required>
+  </div>
+
+  <div class="form-group">
+      <label for="imageurl">Image Url</label>
+      <input type="text" class="form-control" id="imageurl" name="imageurl" placeholder="http://..." [(ngModel)]="model.imageUrl" required>
+  </div>
+
+  <div class="form-group">
+    <label for="yumFactor">Yum Factor</label>
+    <input type="number" class="form-control" id="yumFactor" name="yumFactor" placeholder="How yummy was it?" [(ngModel)]="model.yumFactor" max="5" min="1">
+  </div>
+
+  <button [disabled]="form.invalid" class="btn btn-primary">Add your cake</button>
+</form>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary" [routerLink]="['']">Back to Cakes</button>
+  </div>
+</div>

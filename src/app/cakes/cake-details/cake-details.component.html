@@ -1,0 +1,22 @@
+<p *ngIf="loading; else cakedetails">Loading...</p>
+<ng-template  #cakedetails>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Name</td><td>{{cake.name}}</td>
+      </tr>
+      <tr>
+        <td>Comment</td><td>{{cake.comment}}</td>
+      </tr>
+      <tr>
+        <td>Rating</td><td>{{cake.yumFactor}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary" [routerLink]="['']">Back to Cakes</button>
+  </div>
+</div>

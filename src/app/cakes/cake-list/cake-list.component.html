@@ -1,0 +1,16 @@
+<div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" [routerLink]="['new']">Add a cake</button>
+    </div>
+  </div>
+  <div class="cake-list row" *ngFor="let cake of cakes" [routerLink]="['cake', cake.id]">
+    <div class="col-sm-6">
+      <img class="img-thumbnail" style="max-width: 250px;" src="{{cake.imageUrl}}" *ngIf="!!cake.imageUrl else noimage" />
+      <ng-template #noimage><p>No image set</p></ng-template>
+    </div>
+    <div class="col-sm-6">
+        <h2>{{cake.name}}</h2>
+    </div>
+  </div>
+</div>
