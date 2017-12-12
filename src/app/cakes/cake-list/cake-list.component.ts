@@ -5,10 +5,10 @@ import { CakeService } from '../cake.service';
 @Component({
   selector: 'app-cake-list',
   templateUrl: './cake-list.component.html',
-  styleUrls: ['./cake-list.component.css']
+  styleUrls: ['./cake-list.component.scss']
 })
 export class CakeListComponent implements OnInit {
-  private _backupUrl = '/assets/not-found.png';
+  private _backupUrl = '/assets/images/not-found.png';
 
   errorMessage = '';
   loading = true;

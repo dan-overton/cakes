@@ -13,7 +13,7 @@
         <td>Image</td><td>{{ cake.imageUrl }}</td>
       </tr>
       <tr>
-        <td>Rating</td><td>{{ cake.yumFactor }}</td>
+        <td>Rating</td><td><star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="cake.yumFactor" [readOnly]="true"></star-rating-comp></td>
       </tr>
     </tbody>
   </table>

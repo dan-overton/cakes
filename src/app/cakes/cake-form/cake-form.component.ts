@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-cake-form',
   templateUrl: './cake-form.component.html',
-  styleUrls: ['./cake-form.component.css']
+  styleUrls: ['./cake-form.component.scss']
 })
 export class CakeFormComponent {
   model: Cake;
@@ -15,6 +15,10 @@ export class CakeFormComponent {
 
   constructor(private _cakeService: CakeService, private _router: Router) {
     this.model = new Cake();
+  }
+
+  onRatingChange(ratingChange) {
+    this.model.yumFactor = ratingChange.rating;
   }
 
   submitForm(form: NgForm) {

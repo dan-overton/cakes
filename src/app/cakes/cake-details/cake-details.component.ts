@@ -6,7 +6,7 @@ import { CakeService } from '../cake.service';
 @Component({
   selector: 'app-cake-details',
   templateUrl: './cake-details.component.html',
-  styleUrls: ['./cake-details.component.css']
+  styleUrls: ['./cake-details.component.scss']
 })
 export class CakeDetailsComponent implements OnInit {
 

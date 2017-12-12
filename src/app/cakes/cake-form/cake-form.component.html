@@ -17,11 +17,12 @@
 
   <div class="form-group">
     <label for="yumFactor">Yum Factor</label>
-    <input type="number" class="form-control" id="yumFactor" name="yumFactor" placeholder="How yummy was it?" [(ngModel)]="model.yumFactor" max="5" min="1">
+    <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="model.yumFactor" (onRatingChange)="onRatingChange($event)"></star-rating-comp>
   </div>
 
   <button [disabled]="form.invalid" class="btn btn-primary">Add your cake</button>
 </form>
+
 <div class="row">
   <div class="col">
     <hr/>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -26,8 +26,14 @@ export class CakeService {
   }
 
   createCake(cake: Cake): Observable<any> {
-    const body = JSON.stringify(cake);
-    return this._http.post(`${this._baseUrl}/ceeakes`, body)
+    let {id, ...cakeWithoutId} = cake;
+
+    const body = JSON.stringify(cakeWithoutId);
+
+    let headers = new Headers({'Content-Type': 'application/json'})
+    let options = new RequestOptions({headers: headers});
+    
+    return this._http.post(`${this._baseUrl}/cakes`, body, options)
       .catch(this.handleError);
   }
 

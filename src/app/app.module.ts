@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { StarRatingModule } from 'angular-star-rating';
+
 import { AppComponent } from './app.component';
 
 import { CakeService } from './cakes/cake.service';
@@ -27,7 +29,8 @@ import { CakeDetailsComponent } from './cakes/cake-details/cake-details.componen
       { path: '', component: CakeListComponent},
       { path: 'new', component: CakeFormComponent},
       { path: '**', redirectTo: '', pathMatch: 'full' }
-    ])
+    ]),
+    StarRatingModule.forRoot()
   ],
   providers: [CakeService],
   bootstrap: [AppComponent]

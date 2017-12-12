@@ -6,7 +6,7 @@
       <div class="cake-list">
           <div class="cake" *ngFor="let cake of cakes" [routerLink]="['cake', cake.id]">
             <div class="text-center">
-              <img class="img-thumbnail" style="max-width: 250px;" (error)="imageErrorHandler($event)" src="{{ cake.imageUrl }}"/>
+              <img class="img-thumbnail" class="cake-image" (error)="imageErrorHandler($event)" src="{{ cake.imageUrl }}"/>
               <h2>{{ cake.name }}</h2>
             </div>
           </div>
